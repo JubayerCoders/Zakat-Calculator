@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/zakat_cover"
+            />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="600dp"
+            android:layout_height="190dp"
+            app:lottie_rawRes="@raw/islamic"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title_bc"
+            android:ellipsize="marquee"
+            android:fadingEdge="none"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="7dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="প্রত্যেক নর-নারীর জন্য যাকাত দেওয়া ফরজ "
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/color1"
+        />
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+        <!--- line ======== one  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+
+            >
+
+            <!--- btn calculate  -->
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="93dp"
+                android:background="@drawable/icon_bc"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_calculate"
+                >
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/calculator"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="যাকাত\nক্যালকুলেটর"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+            <!--- btn zakat niyom -->
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="93dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/icon_bc"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_zakat_niyom"
+                >
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/zakat_deya"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="যাকাত\nদেওয়ার নিয়ম"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+            </LinearLayout>
+
+            <!--- btn zakat foroz -->
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="93dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/icon_bc"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_zakat_foroz"
+                >
+
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/rules" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="যাকাত\nকেন ফরজ"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--- line ======== two  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            >
+
+            <!--- btn_zakater_sorto -->
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="93dp"
+                android:background="@drawable/icon_bc"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_zakater_sorto"
+
+                >
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/zakater_sorto"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="যাকাতের শর্ত"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+            </LinearLayout>
+
+            <!--- btn zakat ki -->
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="93dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/icon_bc"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_zakat_ki"
+                >
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/zakat_ki" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="যাকাত কি"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+
+            </LinearLayout>
+
+            <!--- btn_zakater_hisab -->
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="93dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/icon_bc"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_zakater_hisab"
+                >
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/zakater_hisab" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="যাকাতের হিসাব"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--- line ======== three  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            >
+
+            <!--- btn_zakater_khat -->
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="93dp"
+                android:background="@drawable/icon_bc"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_zakater_khat"
+
+                >
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/zakater_khat"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="যাকাতের খাত"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+
+            </LinearLayout>
+
+            <!--- btn_zakat_na_deya -->
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="93dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/icon_bc"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_zakat_na_deya"
+
+                >
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/broken" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="যাকাত\nনা দিলে কি হয়"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <!--- btn_about_developer -->
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="93dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/icon_bc"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="3dp"
+                android:id="@+id/btn_about_developer"
+                >
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="আমাদের\nসম্পর্কে"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="যাকাতের আলোচনা সমূহঃ"
+        android:textStyle="bold"
+        android:textColor="@color/color1"
+        android:textSize="17sp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:orientation="horizontal"
+            >
+
+            <!--- btn_video_1 -->
+            <LinearLayout
+                android:layout_width="195dp"
+                android:layout_height="130dp"
+                android:background="@drawable/web_bg"
+                android:orientation="vertical"
+                android:id="@+id/btn_video1"
+                >
+
+                <ImageView
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/azhari"
+                    android:scaleType="centerCrop"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color1"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="মিজানুর রহমান আযহারী হুজুর ..."
+                    android:textColor="@color/color1"
+                    android:gravity="fill_horizontal"
+                    android:textSize="15sp"
+                    android:lines="1"
+                    android:textStyle="normal"
+
+                    android:ellipsize="end"
+                    android:layout_marginLeft="3dp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="2dp"
+                />
+
+            <LinearLayout
+                android:layout_width="195dp"
+                android:layout_height="130dp"
+                android:background="@drawable/web_bg"
+                android:orientation="vertical"
+                android:id="@+id/btn_video2"
+                >
+
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/foyez_ullah"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color1"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ফয়েজ উল্লাহ হুজুর এর যাকাত নিয়ে ওয়ায..."
+                    android:textColor="@color/color1"
+                    android:gravity="fill_horizontal"
+                    android:textSize="15sp"
+                    android:lines="1"
+                    android:textStyle="normal"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="3dp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:id="@+id/btn_video3"
+                android:layout_width="195dp"
+                android:layout_height="130dp"
+                android:background="@drawable/web_bg"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/mizanurrahman"
+                    android:scaleType="centerCrop"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color1"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="যাকাত কাদের দেওয়া যাবে ? মিজানুর রহমান আজহারী |zakat| (Jakater khat somuho) ~ Mizanur Rahman Azhari"
+                    android:textColor="@color/color1"
+                    android:gravity="fill_horizontal"
+                    android:textSize="15sp"
+                    android:lines="1"
+                    android:textStyle="normal"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="3dp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:id="@+id/btn_video4"
+                android:layout_width="195dp"
+                android:layout_height="130dp"
+                android:background="@drawable/web_bg"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo"
+                    android:scaleType="fitCenter"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color1"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="যাকাত সম্পর্কে বিস্তারিত জানতে ব্লগ পড়ুন"
+                    android:textColor="@color/color1"
+                    android:gravity="fill_horizontal"
+                    android:textSize="15sp"
+                    android:lines="1"
+                    android:textStyle="normal"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="3dp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

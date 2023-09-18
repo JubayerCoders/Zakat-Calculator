@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "976400590332",
+    "project_id": "zakat-calculator-fcd35",
+    "storage_bucket": "zakat-calculator-fcd35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976400590332:android:8dc026cab67621f7c23e79",
+        "android_client_info": {
+          "package_name": "com.codersteam.zakat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976400590332-k087jpbaql6ttqvearmd2t135ej2akln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRers4TGQzSEXoRtHIn7Kjk2gdvLSlZqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976400590332-k087jpbaql6ttqvearmd2t135ej2akln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

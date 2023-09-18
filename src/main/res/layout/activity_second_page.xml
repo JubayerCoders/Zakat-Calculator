@@ -1,0 +1,1795 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Second_page"
+    android:orientation="vertical"
+    >
+
+    <!--- line ======== one  -->
+
+    <!-- zakat calculator -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/calculate"
+        android:visibility="visible"
+        android:background="#FFFFFF"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title_bc"
+            android:padding="5dp"
+            android:text="যাকাত ক্যালকুলেটর"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10sp"
+            android:visibility="visible"
+            />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:gravity="center_horizontal"
+                    android:text="ইসলামে ৭.৫ ভরি স্বর্ণ কিংবা ৫২.৫ ভরি রূপা অথবা সমপরিমাণ অর্থ এক বছর যাবত গচ্ছিত থাকলে বা তার বাজার মূল্য অনুযায়ী মোট অর্থের শতকরা ২.৫% হারে যাকাত দেওয়ার বিধান রয়েছে।"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="3dp"
+                    android:text="২০২৩ সালে যাকাতের পরিমান নিসাব ৯০০১৭ টাকা"
+                    android:textColor="@color/color1"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    />
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/black"
+                    />
+
+
+
+                <!--- all poriman  -->
+                <LinearLayout
+                    android:id="@+id/calculation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"
+                    >
+
+                    <EditText
+                        android:id="@+id/edText_userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:ems="15"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ed_bc"
+                        android:hint="আপনার নাম লিখুন"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:inputType="text"
+                        android:textColorHint="#8A8888"
+                        android:textColor="@color/black"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="স্বর্ণ/স্বর্ণের জুয়েলারি"
+                            android:textColor="@color/color1"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+
+                           />
+
+                        <EditText
+                            android:id="@+id/edText_sorno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ed_bc"
+                            android:hint="পরিমাণ (ভরিতে)"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:ems="10"
+                            android:textColorHint="#8A8888"
+                            android:textColor="@color/black"
+                            />
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="রূপা/রূপার জুয়েলারি"
+                            android:textColor="@color/color1"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/edText_rupa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:ems="10"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ed_bc"
+                            android:hint="পরিমাণ (ভরিতে)"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#8A8888"
+                            android:textColor="@color/black"
+                            />
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="নগদ টাকার পরিমাণ "
+                            android:textColor="@color/color1"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/edText_nagad_taka"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:ems="10"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ed_bc"
+                            android:hint=" টাকা "
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#8A8888"
+                            android:textColor="@color/black"
+                            />
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="     মূল্যবান পাথর     "
+                            android:textColor="@color/color1"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/edText_pathor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:ems="10"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ed_bc"
+                            android:hint="মূল্য (টাকাতে)"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#8A8888"
+                            android:textColor="@color/black"
+                            />
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ধার দিয়েছেন/বিনিয়োগ"
+                            android:textColor="@color/color1"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/edText_dhar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:ems="10"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ed_bc"
+                            android:hint=" টাকা "
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#8A8888"
+                            android:textColor="@color/black"
+                            />
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  জমি-জমা/সম্পদ  "
+                            android:textColor="@color/color1"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/edText_jomi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:ems="10"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ed_bc"
+                            android:hint="মূল্য (টাকাতে)"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#8A8888"
+                            android:textColor="@color/black"
+
+                            />
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ব্যবসায় জমাকৃত অর্থ"
+                            android:textColor="@color/color1"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/edText_bussiness"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:ems="10"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ed_bc"
+                            android:hint=" টাকা "
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#8A8888"
+                            android:textColor="@color/black"
+                            />
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="     ঋণকৃত অর্থ     "
+                            android:textColor="@color/color1"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/edText_rin_taka"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:ems="10"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ed_bc"
+                            android:hint="টাকা"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#8A8888"
+                            android:textColor="@color/black"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" অন্যান্য খাত সমূহ "
+                            android:textColor="@color/color1"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/edText_onanno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:ems="10"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ed_bc"
+                            android:hint="মূল্য (টাকাতে)"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#8A8888"
+                            android:textColor="@color/black"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--- all poriman seen -->
+                <LinearLayout
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/userName_hisab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jubayer Rahman"
+                        android:textColor="@color/color1"
+                        android:textSize="23sp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="0dp"
+                        />
+
+                    <View
+                        android:layout_marginTop="0dp"
+                        android:layout_width="190dp"
+                        android:layout_height="1.5dp"
+                        android:background="@color/black"
+                        android:layout_gravity="center"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="7dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="2"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="স্বর্ণ/স্বর্ণের জুয়েলারি"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="রূপা/রূপার জুয়েলারি"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="নগদ টাকার পরিমাণ"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="মূল্যবান পাথর"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ধার দিয়েছেন/বিনিয়োগ "
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="জমি-জমা/সম্পদ"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ব্যবসায় জমাকৃত অর্থ"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+
+                                />
+
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ঋণকৃত অর্থ"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="অন্যান্য খাত সমূহ"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                />
+
+
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="2"
+                            >
+
+                            <TextView
+                                android:id="@+id/sorno_hisab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                android:layout_gravity="center"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/rupa_hisab"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/nagadTK_hisab"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/pathor_hisab"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/dhar_hisab"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/jomi_hisab"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/bussiness_hisab"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/rin_hisab"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/onanno_hisab"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                android:layout_gravity="center"
+                                />
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_marginTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="@color/black"
+                        android:layout_gravity="center"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_marginTop="3dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="মোট সম্পদ"
+                                    android:textColor="@color/color1"
+                                    android:textSize="23sp"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/total_hisab"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00000 টাকা"
+                                android:textColor="@color/color1"
+                                android:textSize="23sp"
+                                />
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/web_bg"
+                        android:layout_marginBottom="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/user_situation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:textColor="@color/color1"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/mot_poriman"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:textColor="@color/color1"
+                            android:layout_marginTop="6dp"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/zakater_poriman"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:textColor="@color/color1"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:weightSum="2"
+                    >
+
+                    <TextView
+                        android:id="@+id/btn_calculator"
+                        android:layout_width="35dp"
+                        android:layout_height="37dp"
+                        android:text="হিসাব করুন"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/calculate_bc"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:visibility="visible"
+                        />
+
+                    <TextView
+                        android:id="@+id/btn_Hisab_seen"
+                        android:layout_width="35dp"
+                        android:layout_height="37dp"
+                        android:text="হিসাবে ফিরুন"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/calculate_bc"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:visibility="gone"
+                        />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginTop="7dp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/btn_remove"
+                        android:layout_width="35dp"
+                        android:layout_height="37dp"
+                        android:text="মুছে ফেলুন"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:background="@drawable/calculate_bc"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_marginRight="15dp"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </ScrollView>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <!-- zakat deyar niyom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/zakat_deyar_niyom"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/title_bc"
+                    android:padding="5dp"
+                    android:text="যাকাত দেওয়ার নিয়ম"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10sp"
+                    />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="13dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/zakat_deyar_niyom_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@color/black"
+                            android:text="আমাদের মহান আল্লাহতালা যাকাত দেওয়ার জন্য নির্দিষ্ট কিছু বিধান তৈরি করে দিয়েছেন। সম্পূর্ণ হিসাব-নিকাশ কিভাবে আপনাকে করতে হবে সবকিছু বিস্তারিত ভাবে আমাদেরকে বলে দেওয়া আছে কিন্তু তবুও কিছু মানুষ এই নিয়ম কে ভেঙে নতুন নিয়ম করতে চায়। আপনাদেরকে বলে দেওয়া ভালো আপনি যদি যাকাতের দেওয়ার নিয়ম মাফিক কাজ না করেন তাহলে আপনাদের জাকাত কবুল হবে না। আসুন আজ আমরা যাকাত দেওয়ার নিয়ম সঠিকভাবে জেনে নেই।\n\nযে সম্পত্তির উপর যাকাত ফরজ হবে সেই সম্পত্তির চল্লিশ ভাগের এক ভাগ আপনাকে যাকাতের জন্য বরাদ্দ করে রাখতে হবে। দেশ ভাগের এক ভাগ বলতে আমরা বলতে পারি 2.5 শতাংশ। সম্পদের মূল্য যদি একশ টাকা হয় সেখানে আপনার যাকাত দিতে হবে 2 টাকা 50 পয়সার। সম্পদের মূল্য যদি 1000 টাকা হয় সেখানে আপনার যাকাত দিতে হবে 25 টাকা। এই হিসাবটি যখন আপনি সেয়ে যাবেন তখন উক্ত টাকার পণ্য সামগ্রী বা মূল অর্থ আপনি গরীবদের মাঝে ভাগ করে দিলেই যাকাত হয়ে যাবে।\n\nধরুন আপনার ব্যাংকে আপনি টাকা জমা করে রেখেছেন হজে যাওয়ার জন্য। নিশ্চয়ই আপনি সেই টাকা আল্লাহর জন্য পবিত্র হজ শরীফে যাওয়ার উদ্দেশ্যে রেখেছেন কিন্তু ওইটা কারো আপনাকে যাকাত দিতে হবে।\n\nআপনি একটি দোকান তৈরি করেছেন দোকান কে সাজানোর জন্য যে ডেকোরেশন এর অর্থ লাগিয়েছেন ওই অর্থের উপর যাকাত ফরয নয় কিন্তু আপনার দোকানের পণ্যের ওপর এবং লভ্যাংশের উপর যাকাত ফরজ। আপনাকে অবশ্যই এই যাকাত প্রদান করতেই হবে।\n\nআর বলে রাখা ভাল যাকাত দেওয়ার নিয়ম প্রতিবছর নির্দিষ্ট একটি তারিখে ধার্য করা হয়েছে এই সময় অনুযায়ী আপনাকে সব যাকাত দরিদ্রদের মাঝে বিলি করে দিতে হবে।"
+                            />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                >
+
+                <ImageView
+                    android:id="@+id/zakat_deyar_niyom_stop"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/pause"
+                    android:layout_gravity="center"
+                    />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/zakat_deyar_niyom_play"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/voice_animation"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- zakat keno foroz -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/zakat_foroz"
+            android:background="@color/white"
+
+            >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/title_bc"
+                    android:padding="5dp"
+                    android:text="যাকাত কেন ফরজ"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10sp"
+                    />
+
+                <TextView
+                    android:id="@+id/zakat_foroz_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="13dp"
+                    android:text="যাকাত ইসলামের তৃতীয় স্তম্ভ। \n\nমহান আল্লাহ তাআলা যাকাত ফরজ করার মাধ্যমে ধনীদের সাথে গরিবদের মাঝে ভ্রাতৃত্ব প্রতিষ্ঠা করেছেন। যাকাত ফরজ করেছেন যেন ধনী গরীবের মধ্যে সম্পদের বৈষম্য থাকলে যেন ভালোবাসার কমতি না থাকে।\n\nপূঁজিবাদী সমাজব্যবস্থায় দুই শ্রেণির লোক বিদ্যমান। শাসক এবং শোষিত। এই ব্যবস্থায় যারা ধনী আছে তারা আরও ধনী এবং যারা গরিব তারা আরও গরিব হতে থাকে। এই ব্যবস্থা কোনোভাবেই মানবিক হতে পারে না। \n \nআর ইসলাম এই ধরনের স্বার্থান্বেষী ও পূঁজিবাদীদের মুখে চুনকালী মেখে দিয়েছে যাকাতের মাধ্যমে।নেসাব পরিমাণ সম্পদের মালিকের উপর যাকাত ফরজ।\n\nনিসাবের পরিমাণ কমপক্ষে সাড়ে সাত তোলা সোনা অথবা সাড়ে বায়ান্ন তোলা রূপার সমতুল্য সম্পদ বা অর্থ। \nঐ পরিমাণ সম্পদ কারো নিকট পূর্ণ এক বছরকাল স্থায়ী থাকলে তার উপরে যাকাত ফরজ হয়।"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="normal"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    >
+
+                    <ImageView
+                        android:id="@+id/zakat_foroz_stop"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/pause"
+                        android:layout_gravity="center"
+                        />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/zakat_foroz_play"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/voice_animation"
+                        />
+
+
+
+                </LinearLayout>
+
+
+        </LinearLayout>
+
+    <!--- line ======== two  -->
+
+    <!-- zakater_sorto -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zakater_sorto"
+        android:visibility="gone"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/title_bc"
+                    android:padding="5dp"
+                    android:text="যাকাতের শর্ত"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10sp"
+                    />
+
+                <TextView
+                    android:id="@+id/zakater_sorto_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:text="যাকাত ফরজ হওয়ার শর্তসমূহঃ\n\n১. নেসাব পরিমাণ মালের মালিক হওয়া। অর্থাৎ সাড়ে সাত তোলা স্বর্ণ, বা সাড়ে বায়ান্ন তোলা রুপা,কিংবা সমপরিমাণ মূল্যের নগদ টাকা বা ব্যবসার মালের মালিক হওয়া।\n\n২. মুসলমান হওয়া। কাফেরের উপর যাকাত ফরজ নয়।\n\n৩. বালেগ হওয়া। নাবালেগের উপর যাকাত ফরজ নয়।\n\n৪. জ্ঞানী ও বিবেক সম্পন্ন হওয়া। সর্বদা যে পাগল থাকে তার নেসাব পরিমাণ মাল থাকলেও তার উপর যাকাত ফরজ নয়।\n\n৫. স্বাধীন বা মুক্ত হওয়া। দাস-দাসীর উপর যাকাত ফরজ নয়।\n\n৬. মালের উপর পূর্ণ মালিকানা থাকা৷ অসম্পূর্ণ মালিকানার উপর যাকাত ফরজ হয় না।\n\n৭. নেসাব পরিমাণ মাল নিত্য প্রয়োজনীয় সম্পদের অতিরিক্ত হওয়া।"
+                    android:textColor="@color/black"
+                    android:layout_margin="13dp"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                >
+
+                <ImageView
+                    android:id="@+id/zakater_sorto_stop"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/pause"
+                    android:layout_gravity="center"
+                    />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/zakater_sorto_play"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/voice_animation"
+                    />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+    <!-- zakat ki -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zakat_ki"
+        android:visibility="gone"
+        android:background="#FFFFFF"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/title_bc"
+                    android:padding="5dp"
+                    android:text="যাকাত কি"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10sp"
+                    />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="13dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/zakat_ki_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="17sp"
+                            android:text="প্রত্যেক স্বাধীন, পূর্ণবয়স্ক মুসলমান নর-নারীকে প্রতি বছর স্বীয় আয় ও সম্পত্তির একটি নির্দিষ্ট অংশ, যদি তা ইসলামী শরিয়ত নির্ধারিত সীমা (নিসাব পরিমাণ) অতিক্রম করে তবে, গরীব-দুঃস্থদের মধ্যে বিতরণের নিয়মকে যাকাত বলা হয়।\n\nযাকাত ইসলামের পাঁচটি মূল স্তম্ভের অন্যতম। কোনো ব্যক্তি যখন কালেমা পড়ে ইসলামের সীমার মধ্যে দাখিল হয়, তখন থেকেই ইসলামের যাবতীয় বিধি-নির্দেশ মেনে চলা তার জন্যে অপরিহার্য। যাকাত আদায় করা সচ্ছল মুসলমানের প্রতি সৃষ্টিকর্তার অলঙ্ঘনীয় নির্দেশ। কোনো মুসলমানের স্বেচ্ছায় ও সজ্ঞানে এ নির্দেশ অমান্য করার অর্থই হলো আল্লাহ ও তাঁর রসূলের অমান্য করা।\n\nপবিত্র কোরআনে আল্লাহ বলেন, নিশ্চয়ই যারা সত্যে বিশ্বাস করে, সৎকর্ম করে, নামাজ কায়েম করে, যাকাত আদায় করে, তাদের প্রতিফল তাদের প্রতিপালকের কাছে সংরক্ষিত। তাদের কোনো ভয় বা পেরেশানি থাকবে না। বাকারা: ২৭৭\n\nসূরা তওবার ৭১ নাম্বার আয়াতে আল্লাহ বলেন, আর বিশ্বাসী নর হোক বা নারী, তারা একে অপরের সাথি। এরা পরস্পরকে সৎ কাজে উদ্বুদ্ধ করে আর পাপ-অন্যায় থেকে বিরত রাখে। তারা নামাজ কায়েম করে, যাকাত আদায় করে, আল্লাহ ও তাঁর রসুলের আনুগত্য করে। এরাই আল্লাহর রহমতের ছায়ায় থাকবে। নিশ্চয়ই আল্লাহ মহাপরাক্রমশালী, প্রজ্ঞাময়।\n\nবিদায় হজের ভাষণে রসুলুল্লাহ (স) বলেন, হে মানুষ! তোমরা তোমাদের প্রভুর ইবাদত করবে। নামাজ কায়েম করবে, যাকাত আদায় করবে, রোজা রাখবে, হজ করবে আর সঙ্ঘবদ্ধভাবে নেতাকে অনুসরণ করবে, তাহলে তোমরা জান্নাতে দাখিল হতে পারবে।\n\nযাকাত শব্দের অর্থ পবিত্র করা, পরিশুদ্ধ করা বা প্রবৃদ্ধি দান করা। শরিয়তের ভাষায়, সুনির্ধারিত সম্পদ সুনির্ধারিত শর্তে তার হকদারকে অর্পণ করা। এক কথায় কোনো মুসলমান আল্লাহ নির্ধারিত (নিসাব) পরিমাণ সম্পদের মালিক হলে এবং তা এক বছর পর্যন্ত তার কাছে থাকলে তার নির্ধারিত পরিমাণ অংশ হকদারের কাছে পৌঁছে দেয়াকে যাকাত বলা হয়। সুনির্ধারিত অংশটি শরিয়তসম্মতভাবে আদায় না করলে গোটা সম্পদই মুমিনের জন্যে হারাম হয়ে যায়। যাকাত একটি রাষ্ট্রীয় ও সামাজিক ব্যবস্থা।\n\n২য় হিজরিতে যাকাত ফরজ হওয়ার পর রাষ্ট্রপ্রধান হিসেবে মহানবী (স) যাকাত ব্যবস্থা চালু করেন। যাকাত আদায়ে যাকাতের নির্ধারিত এবং খরচের খাত নির্ধারণ করে একে একটি সুদৃঢ় অর্থনৈতিক ব্যবস্থা হিসেবে গড়ে তোলেন। হযরত মা' আজ ইবনে জাবাল (রা)-কে ইয়েমেনের গভর্নর হিসেবে নিয়োগ দান করে রসূল (স) ঘোষণা দেন- তাদের জানিয়ে দাও যে, তাদের ধন-মালে আল্লাহ তায়ালা সদকা-যাকাত ফরজ করে দিয়েছেন, যা তাদের ধনী লোকদের কাছ থেকে গ্রহণ করা হবে ও গরীব বা ফকিরদের মাঝে বণ্টন করা হবে। (বোখারী, মুসলিম)\n\nএসব সুস্পষ্ট নির্দেশের আলোকেই ইসলামের প্রখ্যাত ভাষ্যকারগণ বলেছেন, যে লোক কোরআন ও সুন্নাহর সরাসরি নির্দেশ অস্বীকার করবে, তার ফরজ হওয়াকে অমান্য করবে, সে নির্ঘাত কাফির বলে গণ্য হবে। (আল্লামা ইউসুফ আল কারযাভীকৃত ইসলামের যাকাত বিধান, ১ম খণ্ড, পৃ- ১০১ )"
+                            android:textColor="@color/black"
+
+
+                            />
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                >
+
+                <ImageView
+                    android:id="@+id/zakat_ki_stop"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/pause"
+                    android:layout_gravity="center"
+                    />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/zakat_ki_play"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/voice_animation"
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!-- zakater hisab -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/zakater_hisab"
+        android:background="#FFFFFF"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title_bc"
+            android:padding="5dp"
+            android:text="যাকাতের হিসাব"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10sp"
+            android:visibility="gone"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/under_maintance"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_marginTop="50dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:text="Service Under Maintance"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textStyle="normal"
+
+            />
+
+    </LinearLayout>
+
+
+    <!--- line ======== three  -->
+
+    <!-- zakater_khat -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/zakater_khat"
+        android:background="#FFFFFF"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/title_bc"
+                    android:padding="5dp"
+                    android:text="যাকাতের খাত"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10sp"
+                    />
+
+                <TextView
+                    android:id="@+id/zakater_khat_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="17sp"
+                    android:text="পবিত্র কুরআনের সূরা আত-তাওবার ৬০ নাম্বার আয়াতে যাকাত বণ্টনে আটটি খাত আল্লাহ তায়ালা নির্ধারন করেছেন। এই খাতগুলো সরাসরি কুরআন দ্বারা নির্দিষ্ট এবং যেহেতু তা আল্লাহর নির্দেশ, তাই এর বাইরে যাকাত বণ্টন করলে তা ইসলামী শরিয়তসম্মত হয় না।
+
+\n\n01. ফকির (যার কিছুই নেই)\n02. মিসকীন (যার নেসাব পরিমাণ সম্পদ নেই)
+
+\n03. যাকাত আদায়ে নিযুক্ত কর্মচারী (যার অন্য জীবিকা নেই) 04. নওমুসলিমদের (আর্থিক সংকটে থাকলে)
+
+\n05. ক্রীতদাস (মুক্তির উদ্দেশ্যে)
+
+\n06. ধনী সম্পদশালী ব্যক্তি যার সম্পদের তুলনায় ঋণ বেশি \n07. (স্বদেশে ধনী হলেও বিদেশে) আল্লাহর পথে জেহাদরত ব্যক্তি \n08. মুসাফির (যিনি ভ্রমণকালে অভাবে পতিত )
+
+\n\nহাদিসমতে, এগুলো ফরয সাদকাহের খাত, এবং নফল সাদকাহ এই আট খাতেই সীমাবদ্ধ নয়, বরং এর পরিসর আরো প্রশস্ত। উল্লেখিত খাতসমূহে যাকাত বণ্টন করতে হয় সঠিক পন্থায়। অনেকে যাকাতের অর্থে শাড়ি ক্রয় করে তা বণ্টন করে থাকেন। এভাবে যাকাত আদায় হয়ে গেলেও আসলে প্রকৃতপক্ষে যাকাত গ্রহণকারীর তেমন উপকার হয় না।\nতাই যাকাত বণ্টনের উত্তম পন্থা হলো: যাকাত যাদেরকে প্রদান করা যায়, তাদের একজনকেই বা একটি পরিবারকেই যাকাতের সম্পূর্ণ অর্থ দিয়ে স্বাবলম্বী করে দেয়া।
+"
+                    android:textColor="@color/black"
+                    android:layout_margin="13dp"
+                    android:textStyle="normal"
+
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                >
+
+                <ImageView
+                    android:id="@+id/zakater_khat_stop"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/pause"
+                    android:layout_gravity="center"
+                    />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/zakater_khat_play"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/voice_animation"
+                    />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- zakat_na_deya -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/zakat_na_deya"
+        android:background="#FFFFFF"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title_bc"
+            android:padding="5dp"
+            android:text="যাকাত না দিলে কি হয়"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10sp"
+            android:visibility="gone"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/under_maintance"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_marginTop="50dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:text="Service Under Maintance"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textStyle="normal"
+
+            />
+
+    </LinearLayout>
+
+    <!-- about_developer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/about_developer"
+        android:background="#FFFFFF"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="131dp"
+                android:layout_height="137dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="113dp"
+                android:src="@drawable/jubayer_profile"
+                app:civ_border_color="#FF5722"
+                app:civ_border_width="2dp" />
+
+            <!-- btn_mail -->
+            <LinearLayout
+                android:id="@+id/btn_mail"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/profile_image"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/web_bg"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/mail" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="jubayer0267@gmail.com"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+            <!-- btn_facebook -->
+            <LinearLayout
+                android:id="@+id/btn_facebook"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/btn_mail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/web_bg"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/facebook" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Jubayer Rahman"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+
+            <!-- btn_insta -->
+            <LinearLayout
+                android:id="@+id/btn_instagram"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/btn_facebook"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/web_bg"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/instagram" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Jubayer Rahman"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+
+            <!-- btn_call -->
+            <LinearLayout
+                android:id="@+id/btn_call"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/btn_instagram"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/web_bg"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/call"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="01826994391"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+
+            <!-- btn_whatsapp -->
+            <LinearLayout
+                android:id="@+id/btn_whatsapp"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/btn_call"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/web_bg"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/whatsapp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="01826994391"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+
+            <!-- btn_telegram -->
+            <LinearLayout
+                android:id="@+id/btn_telegram"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/btn_whatsapp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/web_bg"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/telegram"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Jubayer Rahman"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/btn_telegram"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-120dp"
+                android:gravity="center"
+                android:text="Version 1.0"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                />
+
+            <TextView
+                android:id="@+id/ab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/version"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-20dp"
+                android:text="Powered By: CODERS_TEAM"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_internet_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+
+        >
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/no_internet_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/no_internet"
+            />
+
+        <TextView
+            android:id="@+id/no_internet_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO INTERNET CONNECTION"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/no_internet_animation"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check your Internet connection\nand try again"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_below="@+id/no_internet_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/try_again"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Go Back"
+            android:textSize="25sp"
+            android:background="@drawable/try_bc"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/no"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:textStyle="bold"
+            />
+
+
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/video1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>
